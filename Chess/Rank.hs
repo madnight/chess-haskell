@@ -29,10 +29,12 @@ figureDefendingOtherFiguresRank :: Game -> Field -> Figure -> Int
 figureDefendingOtherFiguresRank game field figure =
   (length $ defendedDestinations game (figureMoves figure field True)) `div` 2
 
+-- | Returns a rank value related to whether the King is under check or not.
 checkRank :: Game -> Color -> Int
 checkRank game color =
   if (gameColor game == other color) && isKingUnderCheck game then 50 else 0
 
+-- | Calculates the position rank taking one color into account.
 colorRank :: Game -> Color -> Int
 colorRank game color =
   let ranks = [ r1+r2+r3 |
@@ -43,10 +45,12 @@ colorRank game color =
                 let r3 = figureDefendingOtherFiguresRank game field figure ]
   in sum ranks + checkRank game color
 
+-- | Calculates the position rank from the point of view of a player.
 rank :: Game -> Color -> Int
 rank game color = colorRank game color - colorRank game (other color)
 
-{--
+{-
+
 ghci
 :load Chess/Rank.hs
 figureRank (Figure Queen White) -- 900
@@ -76,5 +80,5 @@ rank g3 White -- 5
 rank g4 White -- -32
 rank GameStart Black -- -8
 :q
---}
-  
+
+-}

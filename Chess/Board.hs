@@ -79,7 +79,8 @@ updateBoard board (CastlingMove fromKing toKing fromRook toRook) =
     _ -> board
 
 
-{--
+{-
+
 ghci
 :load Chess/Board.hs
 startingBoard
@@ -91,4 +92,5 @@ putStr $ showBoard $ updateBoard startingBoard (PromotionMove (Field 2 2) (Field
 putStr $ showBoard $ updateBoard startingBoard (EnPassantMove (Field 2 2) (Field 3 3) (Field 3 7))
 putStr $ showBoard $ updateBoard startingBoard (CastlingMove (Field 5 1) (Field 3 1) (Field 1 1) (Field 4 1))
 :q
---}
+
+-}

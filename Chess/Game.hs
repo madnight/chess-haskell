@@ -199,7 +199,8 @@ move from to promotion game =
             EnPassantMove f t _ -> f == from && t == to && isNothing promotion
             CastlingMove f t _ _ ->  f == from && t == to && isNothing promotion
 
-{--
+{-
+
 ghci
 :load Chess/Game.hs
 GameStart
@@ -227,5 +228,5 @@ winner g4 -- Just Black
 length (nextGames g4) -- 20
 length (validGames g4) -- 0
 :q
---}
-  
+
+-}

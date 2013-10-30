@@ -64,6 +64,7 @@ figureMoves :: Figure -> Field -> Bool -> [[Field]]
 figureMoves figure field capture = map (relativeFields field) $ chooseFigureMoves figure field capture
 
 {--
+
 ghci
 :load Chess/FigureMoves.hs
 map (\(a,b) -> (take 4 a,take 4 b)) rookMoves -- [([1,2,3,4],[0,0,0,0]),([-1,-2,-3,-4],[0,0,0,0]),([0,0,0,0],[1,2,3,4]),([0,0,0,0],[-1,-2,-3,-4])]
@@ -85,4 +86,5 @@ figureMoves (Figure Pawn White) (Field 2 2) False -- [[b3,b4]]
 figureMoves (Figure Pawn White) (Field 2 2) True -- [[a3],[c3]]
 figureMoves (Figure Pawn White) (Field 1 2) True -- [[],[b3]]
 :q
---}
+
+-}

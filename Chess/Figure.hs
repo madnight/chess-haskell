@@ -26,6 +26,7 @@ instance Show Figure where
   show (Figure Pawn   Black) = "P"
 
 {-
+
 ghci
 :load Chess/Figure.hs
 Figure King White -- k
@@ -33,4 +34,5 @@ Figure King Black -- K
 Figure Queen Black -- Q
 Figure Rook Black -- R
 :q
+
 -}

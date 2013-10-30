@@ -17,6 +17,7 @@ firstRow White = 1
 firstRow Black = 8
 
 {-
+
 ghci
 :load Chess/Color.hs
 other White -- Black
@@ -24,4 +25,5 @@ other Black -- White
 firstRow White -- 1
 firstRow Black -- 8
 :q
+
 -}

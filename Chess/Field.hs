@@ -35,6 +35,7 @@ isValid :: Field -> Bool
 isValid (Field col row) = col >= 1 && col <= 8 && row >= 1 && row <= 8
 
 {-
+
 ghci
 :load Chess/Field.hs
 Field 1 4 -- a4
@@ -44,4 +45,5 @@ relative (Field 1 4) 1 1 -- b5
 isLastRow (Field 2 1) Black -- True
 isValid (Field 2 1) -- True
 :q
+
 -}

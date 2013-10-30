@@ -9,9 +9,10 @@ data Move = RegularMove   { from :: Field, to :: Field }
           | CastlingMove  { from :: Field, to :: Field, rookFrom :: Field, rookTo :: Field }
   deriving Show
 
-{--
+{-
+
 ghci
 :load Chess/Move.hs
 :q
---}
-  
+
+-}
